@@ -80,182 +80,47 @@
         .header .links a:hover {
             opacity: 0.7;
         }
-
-        /* Seção de Projetos */
-        .secao-projetos {
+        
+        /* Seção Sobre Mim */
+        .sobre {
+            text-align: center;
+            max-width: 700px; /* Limita a largura do texto */
+            margin: 40px auto; /* Centraliza */
+        }
+        
+        .sobre h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: var(--cor-primaria);
+        }
+        
+        .sobre p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        /* Seção Habilidades (NOVO) */
+        .habilidades {
             margin-bottom: 40px;
         }
-
-        .secao-projetos h2 {
+        
+        .habilidades h2 {
             font-size: 2rem;
             border-bottom: 2px solid var(--cor-borda);
             padding-bottom: 10px;
             margin-bottom: 30px;
             text-align: center;
         }
-
-        /* Grade de Cartões de Projeto */
-        .grade-projetos {
-            display: grid;
-            grid-template-columns: 1fr; /* 1 coluna por padrão */
-            gap: 25px;
+        
+        .habilidades h3 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            color: var(--cor-texto);
+            font-weight: 600;
         }
-
-        /* Em telas maiores, 2 colunas */
-        @media (min-width: 768px) {
-            .grade-projetos {
-                grid-template-columns: 1fr 1fr; /* 2 colunas */
-            }
-        }
-
-        /* Cartão de Projeto Individual */
-        .cartao-projeto {
-            background-color: var(--cor-cartao);
-            border: 1px solid var(--cor-borda);
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 4px 10px var(--cor-sombra);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between; /* Empurra o link para baixo */
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .cartao-projeto:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 15px var(--cor-sombra);
-        }
-
-        .cartao-projeto h3 {
-            font-size: 1.4rem;
-            color: var(--cor-primaria);
-            margin-bottom: 10px;
-        }
-
-        .cartao-projeto p {
-            font-size: 1rem;
-            margin-bottom: 20px;
-            flex-grow: 1; /* Faz a descrição ocupar o espaço */
-        }
-
-        .cartao-projeto .tags {
+        
+        .habilidades .tags {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-        }
-
-        .cartao-projeto .tags span {
-            background-color: var(--cor-tag);
-            color: var(--cor-tag-texto);
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-
-        .cartao-projeto .link-repo {
-            display: inline-block;
-            text-decoration: none;
-            color: var(--cor-primaria);
-            font-weight: 600;
-            align-self: flex-start; /* Alinha o link no início */
-        }
-
-        .cartao-projeto .link-repo:hover {
-            text-decoration: underline;
-        }
-        
-        /* Rodapé */
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            color: #888;
-        }
-
-    </style>
-</head>
-<body>
-
-    <div class="container">
-
-        <header class="header">
-            <h1>Vinicius Costa</h1>
-            <div class="links">
-                <a href="https://github.com/ViniciusCostawj" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/SEU-USUARIO-AQUI" target="_blank">LinkedIn</a>
-                <a href="mailto:SEU-EMAIL-AQUI">Email</a>
-            </div>
-        </header>
-
-        <main>
-            <section class="secao-projetos">
-                <h2>Projetos Principais</h2>
-
-                <div class="grade-projetos">
-
-                    <div class="cartao-projeto">
-                        <div>
-                            <h3>API SPI & DICT (PIX)</h3>
-                            <p>API em FastAPI para integração segura com o SPI (PIX) e DICT do Banco Central. Implementa mTLS, assinatura XMLDSig (pacs.008) e consultas de chaves.</p>
-                            <div class="tags">
-                                <span>FastAPI</span>
-                                <span>HTTPX</span>
-                                <span>Cryptography</span>
-                                <span>SignXML</span>
-                                <span>LXML</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/ViniciusCostawj/Legado-banco-bacen" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
-                    </div>
-
-                    <div class="cartao-projeto">
-                        <div>
-                            <h3>Backup de Mensageria Bacen</h3>
-                            <p>Script Python que realiza consultas otimizadas em PostgreSQL (focadas em mensageria Bacen) e exporta os resultados de forma eficiente para JSON.</p>
-                            <div class="tags">
-                                <span>Python</span>
-                                <span>psycopg2</span>
-                                <span>JSON</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/ViniciusCostawj/backup-s-processo" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
-                    </div>
-
-                    <div class="cartao-projeto">
-                        <div>
-                            <h3>Raspagem - Portal da Transparência</h3>
-                            <p>Script de web scraping que acessa o Portal da Transparência, extrai dados de servidores públicos (nome, CPF, cargo, etc.) e salva os resultados em JSON e TXT.</p>
-                            <div class="tags">
-                                <span>Python</span>
-                                <span>Scrapy</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/ViniciusCostawj/raspagem-scrapy-de-dados-1" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
-                    </div>
-
-                    <div class="cartao-projeto">
-                        <div>
-                            <h3>Verificador de Domínios (Registro.br)</h3>
-                            <p>Script Python que utiliza Selenium (em modo headless) para verificar automaticamente a disponibilidade de domínios no site registro.br e salvar os resultados em JSON.</p>
-                            <div class="tags">
-                                <span>Python</span>
-                                <span>Selenium</span>
-                                <span>JSON</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/ViniciusCostawj/raspagem-de-dados-2" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
-                    </div>
-
-                </div>
-            </section>
-        </main>
-        
-        <footer class="footer">
-            <p>&copy; 2025 Vinicius Costa. Feito com HTML, CSS e ☕</p>
-        </footer>
-
-    </div>
-
-</body>
-</html>
+            gap: 10px;
+            margin-bottom: 25px;

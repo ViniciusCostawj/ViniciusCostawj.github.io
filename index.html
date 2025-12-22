@@ -11,6 +11,7 @@
             --cor-texto: #333;
             --cor-cartao: #ffffff;
             --cor-primaria: #007bff;
+            --cor-destaque-ia: #8e44ad; /* Cor Roxo para IA */
             --cor-sombra: rgba(0, 0, 0, 0.1);
             --cor-tag: #e9ecef;
             --cor-tag-texto: #555;
@@ -24,6 +25,7 @@
                 --cor-texto: #e0e0e0;
                 --cor-cartao: #1e1e1e;
                 --cor-primaria: #0099ff;
+                --cor-destaque-ia: #bb86fc;
                 --cor-sombra: rgba(0, 0, 0, 0.4);
                 --cor-tag: #333;
                 --cor-tag-texto: #ccc;
@@ -84,8 +86,8 @@
         /* Seção Sobre Mim */
         .sobre {
             text-align: center;
-            max-width: 700px; /* Limita a largura do texto */
-            margin: 40px auto; /* Centraliza */
+            max-width: 750px;
+            margin: 40px auto;
         }
         
         .sobre h2 {
@@ -151,13 +153,13 @@
         /* Grade de Cartões de Projeto */
         .grade-projetos {
             display: grid;
-            grid-template-columns: 1fr; /* 1 coluna por padrão */
+            grid-template-columns: 1fr;
             gap: 25px;
         }
 
         @media (min-width: 768px) {
             .grade-projetos {
-                grid-template-columns: 1fr 1fr; /* 2 colunas */
+                grid-template-columns: 1fr 1fr;
             }
         }
 
@@ -245,43 +247,41 @@
             <section class="sobre">
                 <h2>🚀 Sobre mim</h2>
                 <p>
-                    Cientista da Computação e Desenvolvedor Python com foco em Automação de Processos (RPA) e Back-end. Experiência sólida no desenvolvimento de scripts e robôs para otimização de tarefas e cargas de dados (ETL), utilizando Python (Pandas, Selenium) e SQL. No setor financeiro, desenvolvi desde automações para backups de mensageria até integrações complexas (API PIX), sempre prezando por código limpo e documentado.
+                    Cientista da Computação e Desenvolvedor com foco em <strong>Engenharia de IA</strong>, Automação de Processos e Back-end. Especializado na construção de <strong>Agentes Autônomos</strong> e pipelines de dados inteligentes. Experiência sólida em integrar LLMs (Llama 3, OpenAI) com bancos de dados corporativos (Text-to-SQL) e otimizar rotinas financeiras críticas (ETL, API PIX), sempre prezando por inovação e código limpo.
                 </p>
             </section>
             
             <section class="habilidades">
                 <h2>🛠️ Tecnologias & Ferramentas</h2>
                 
-                <h3>Linguagens</h3>
+                <h3>Inteligência Artificial (IA)</h3>
                 <div class="tags">
-                    <span>Python</span>
-                    <span>SQL</span>
-                    <span>JavaScript</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>C</span>
-                    <span>Java</span>
+                    <span style="border: 1px solid var(--cor-destaque-ia); color: var(--cor-destaque-ia);">LangChain</span>
+                    <span>Llama 3 (Ollama)</span>
+                    <span>RAG / Text-to-SQL</span>
+                    <span>Prompt Engineering</span>
+                    <span>Agentes Autônomos</span>
                 </div>
 
                 <h3>Back-end & Dados</h3>
                 <div class="tags">
+                    <span>Python</span>
                     <span>FastAPI</span>
                     <span>Flask</span>
                     <span>PostgreSQL</span>
                     <span>Pandas</span>
                     <span>Selenium</span>
-                    <span>Scrapy</span>
-                    <span>DevOps (CI/CD)</span>
+                    <span>SQL Avançado</span>
                 </div>
-                
-                <h3>Outros</h3>
+
+                <h3>Linguagens & Outros</h3>
                 <div class="tags">
+                    <span>JavaScript (React)</span>
+                    <span>HTML/CSS</span>
                     <span>Git & GitHub</span>
-                    <span>APIs REST</span>
-                    <span>Testes de Software</span>
-                    <span>Segurança da Informação</span>
-                    <span>XML</span>
+                    <span>DevOps (CI/CD)</span>
                     <span>Zabbix/Grafana</span>
+                    <span>Linux</span>
                 </div>
             </section>
 
@@ -290,6 +290,28 @@
 
                 <div class="grade-projetos">
                     
+                    <div class="cartao-projeto" style="border-left: 5px solid var(--cor-destaque-ia);">
+                        <div>
+                            <h3 style="color: var(--cor-destaque-ia);">Agente IA: Analista SQL & Fluxos</h3>
+                            <p>
+                                Um agente autônomo desenvolvido com <strong>LangChain</strong> e <strong>Llama 3</strong> que atua como um Analista de Banco de Dados Nível 3.
+                                <br><br>
+                                <strong>Funcionalidades:</strong>
+                                <br>• <strong>Text-to-SQL:</strong> Converte perguntas em linguagem natural (ex: "mostre os erros de hoje") em queries SQL complexas e seguras.
+                                <br>• <strong>Investigação Autônoma:</strong> Analisa logs de transações (NUOP), cruza dados de múltiplas tabelas e diagnostica falhas.
+                                <br>• <strong>Relatórios Automáticos:</strong> Gera arquivos Markdown contendo a análise técnica da IA e gráficos de fluxo (Mermaid.js).
+                            </p>
+                            <div class="tags">
+                                <span>Python</span>
+                                <span>LangChain</span>
+                                <span>Ollama (Llama 3)</span>
+                                <span>GenAI</span>
+                                <span>PostgreSQL</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/ViniciusCostawj" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
+                    </div>
+
                     <div class="cartao-projeto">
                         <div>
                             <h3>Evolução SPB: Script &rarr; Plataforma</h3>
@@ -298,7 +320,7 @@
                                 <br><br>
                                 <strong>V1 (Automação):</strong> Scripts Python para backups de segurança e integridade de dados bancários.
                                 <br>
-                                <strong>V2 (Full Stack):</strong> Evolução para uma plataforma de inteligência. Desenvolvi uma API em <strong>Flask</strong> com análise de latência e um Front-end em <strong>React</strong> para consultar 5 tabelas PostgreSQL simultaneamente, a plataforma valida tambem qual usuario legado consumiu a menssageria e quanto tempo levou para fazer o mesmo calculando o tempo medio.
+                                <strong>V2 (Full Stack):</strong> Evolução para uma plataforma de inteligência. Desenvolvi uma API em <strong>Flask</strong> com análise de latência e um Front-end em <strong>React</strong> para consultar 5 tabelas PostgreSQL simultaneamente.
                             </p>
                             <div class="tags">
                                 <span>Python</span>
@@ -308,7 +330,7 @@
                                 <span>SQL Avançado</span>
                             </div>
                         </div>
-                        <a href="https://github.com/ViniciusCostawj/Monitoramento-de-Mensageria-de-Alta-Performance/tree/main" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
+                        <a href="https://github.com/ViniciusCostawj" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
                     </div>
 
                     <div class="cartao-projeto">
@@ -418,5 +440,3 @@
 
 </body>
 </html>
-
-

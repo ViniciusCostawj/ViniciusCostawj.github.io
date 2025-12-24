@@ -247,7 +247,7 @@
             <section class="sobre">
                 <h2>🚀 Sobre mim</h2>
                 <p>
-                    Cientista da Computação e Desenvolvedor com foco em <strong>Engenharia de IA</strong>, Automação de Processos e Back-end. Especializado na construção de <strong>Agentes Autônomos</strong> e pipelines de dados inteligentes. Experiência sólida em integrar LLMs (Llama 3, OpenAI) com bancos de dados corporativos (Text-to-SQL) e otimizar rotinas financeiras críticas (ETL, API PIX), sempre prezando por inovação e código limpo.
+                    Cientista da Computação e Desenvolvedor focado em <strong>Engenharia de IA</strong>, Automação de Processos e Back-end. Especializado na construção de <strong>Agentes Autônomos</strong> e pipelines de dados inteligentes. Tenho experiência sólida em integrar LLMs (Llama 3) com bancos de dados corporativos (Text-to-SQL) e otimizar rotinas financeiras críticas (ETL, API PIX), sempre prezando por inovação e código limpo.
                 </p>
             </section>
             
@@ -259,7 +259,7 @@
                     <span style="border: 1px solid var(--cor-destaque-ia); color: var(--cor-destaque-ia);">LangChain</span>
                     <span>Llama 3 (Ollama)</span>
                     <span>RAG / Text-to-SQL</span>
-                    <span>Prompt Engineering</span>
+                    <span>Regex (Data Mining)</span>
                     <span>Agentes Autônomos</span>
                 </div>
 
@@ -292,35 +292,34 @@
                     
                     <div class="cartao-projeto" style="border-left: 5px solid var(--cor-destaque-ia);">
                         <div>
-                            <h3 style="color: var(--cor-destaque-ia);">Agente IA: Analista SQL & Fluxos</h3>
+                            <h3 style="color: var(--cor-destaque-ia);">Agente IA v2.0: Forense Bancária</h3>
                             <p>
-                                Um agente autônomo desenvolvido com <strong>LangChain</strong> e <strong>Llama 3</strong> que atua como um Analista de Banco de Dados Nível 3.
+                                Evolução do Agente SQL para uma ferramenta de investigação completa. Utiliza <strong>Llama 3</strong> e <strong>Regex</strong> para análise profunda.
                                 <br><br>
-                                <strong>Funcionalidades:</strong>
-                                <br>• <strong>Text-to-SQL:</strong> Converte perguntas em linguagem natural (ex: "mostre os erros de hoje") em queries SQL complexas e seguras.
-                                <br>• <strong>Investigação Autônoma:</strong> Analisa logs de transações (NUOP), cruza dados de múltiplas tabelas e diagnostica falhas.
-                                <br>• <strong>Relatórios Automáticos:</strong> Gera arquivos Markdown contendo a análise técnica da IA e gráficos de fluxo (Mermaid.js).
+                                <strong>Novas Funcionalidades (v2.0):</strong>
+                                <br>• <strong>Text-to-SQL Blindado:</strong> Prompt Engineering defensivo para garantir consultas SQL seguras e tipadas.
+                                <br>• <strong>Análise de XML via Regex:</strong> Extração instantânea de tags de erro (`AddtlInf`) sem custo de tokens.
+                                <br>• <strong>SLA Automático:</strong> Cálculo de latência de processamento com alertas de gargalo (>10s).
+                                <br>• <strong>Visão Unificada:</strong> Cruza dados de tabelas em tempo real e legado em uma única consulta.
                             </p>
                             <div class="tags">
                                 <span>Python</span>
                                 <span>LangChain</span>
-                                <span>Ollama (Llama 3)</span>
-                                <span>GenAI</span>
+                                <span>Regex</span>
+                                <span>Ollama</span>
                                 <span>PostgreSQL</span>
                             </div>
                         </div>
-                        <a href="https://github.com/ViniciusCostawj/-BankFlow-AI---Agente-Inteligente-de-Monitoramento-SPB" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
+                        <a href="https://github.com/ViniciusCostawj" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
                     </div>
 
                     <div class="cartao-projeto">
                         <div>
-                            <h3>Evolução SPB: Script &rarr; Plataforma</h3>
+                            <h3>Plataforma de Monitoramento SPB</h3>
                             <p>
-                                Um projeto em duas fases demonstrando evolução técnica:
+                                De script manual para plataforma Full Stack. Solução para rastreamento em tempo real de transações financeiras críticas.
                                 <br><br>
-                                <strong>V1 (Automação):</strong> Scripts Python para backups de segurança e integridade de dados bancários.
-                                <br>
-                                <strong>V2 (Full Stack):</strong> Evolução para uma plataforma de inteligência. Desenvolvi uma API em <strong>Flask</strong> com análise de latência e um Front-end em <strong>React</strong> para consultar 5 tabelas PostgreSQL simultaneamente.
+                                <strong>Stack:</strong> Back-end em <strong>Flask</strong> otimizado com CTEs e UNION ALL para consultar 5 tabelas simultaneamente. Front-end em <strong>React</strong> com indicadores visuais de performance.
                             </p>
                             <div class="tags">
                                 <span>Python</span>
@@ -339,10 +338,9 @@
                             <p>API em FastAPI para integração segura com o SPI (PIX) e DICT do Banco Central. Implementa mTLS, assinatura XMLDSig (pacs.008) e consultas de chaves.</p>
                             <div class="tags">
                                 <span>FastAPI</span>
-                                <span>HTTPX</span>
                                 <span>Cryptography</span>
                                 <span>SignXML</span>
-                                <span>LXML</span>
+                                <span>mTLS</span>
                             </div>
                         </div>
                         <a href="https://github.com/ViniciusCostawj/Legado-banco-bacen" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
@@ -364,7 +362,7 @@
                     <div class="cartao-projeto">
                         <div>
                             <h3>Raspagem - Portal da Transparência</h3>
-                            <p>Script de web scraping que acessa o Portal da Transparência, extrai dados de servidores públicos (nome, CPF, cargo, etc.) e salva os resultados em JSON e TXT.</p>
+                            <p>Script de web scraping que acessa o Portal da Transparência, extrai dados de servidores públicos e estrutura os resultados para análise.</p>
                             <div class="tags">
                                 <span>Python</span>
                                 <span>Scrapy</span>
@@ -376,11 +374,11 @@
                     <div class="cartao-projeto">
                         <div>
                             <h3>Verificador de Domínios (Registro.br)</h3>
-                            <p>Script Python que utiliza Selenium (em modo headless) para verificar automaticamente a disponibilidade de domínios no site registro.br e salvar os resultados em JSON.</p>
+                            <p>Script Python (RPA) que utiliza Selenium headless para verificar disponibilidade massiva de domínios e salvar relatórios JSON.</p>
                             <div class="tags">
                                 <span>Python</span>
                                 <span>Selenium</span>
-                                <span>JSON</span>
+                                <span>Automação</span>
                             </div>
                         </div>
                         <a href="https://github.com/ViniciusCostawj/raspagem-de-dados-2" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
@@ -389,12 +387,11 @@
                     <div class="cartao-projeto">
                         <div>
                             <h3>Gerenciamento de Tarefas (CRUD)</h3>
-                            <p>Sistema web em PHP para gerenciamento de tarefas (CRUD) com autenticação de usuários, criação, visualização e categorização, usando SQLite como banco de dados.</p>
+                            <p>Sistema web em PHP para gerenciamento de tarefas com autenticação e banco de dados SQLite.</p>
                             <div class="tags">
                                 <span>PHP</span>
                                 <span>SQLite</span>
-                                <span>HTML</span>
-                                <span>CSS</span>
+                                <span>HTML/CSS</span>
                             </div>
                         </div>
                         <a href="https://github.com/ViniciusCostawj/Crud-SQLITE" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
@@ -403,12 +400,11 @@
                     <div class="cartao-projeto">
                         <div>
                             <h3>Rose - Assistente Virtual</h3>
-                            <p>Assistente virtual em Python ativada por voz ("rose"). Utiliza reconhecimento de voz para executar comandos como buscar cotações, ler notícias e tocar playlists.</p>
+                            <p>Assistente virtual em Python ativada por voz ("rose"). Utiliza reconhecimento de voz para executar comandos e buscas.</p>
                             <div class="tags">
                                 <span>Python</span>
                                 <span>SpeechRecognition</span>
-                                <span>playsound</span>
-                                <span>unidecode</span>
+                                <span>IA Básica</span>
                             </div>
                         </div>
                         <a href="https://github.com/ViniciusCostawj/rose_py" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
@@ -417,12 +413,11 @@
                     <div class="cartao-projeto">
                         <div>
                             <h3>Scripts de Análise e Automação</h3>
-                            <p>Uma coleção de scripts utilitários em Python/Pandas para tarefas reais, como reconciliação de arquivos CSV, cálculo de resumos financeiros e filtragem de dados.</p>
+                            <p>Coleção de scripts utilitários em Python/Pandas para reconciliação de arquivos, cálculos financeiros e ETL.</p>
                             <div class="tags">
                                 <span>Python</span>
                                 <span>Pandas</span>
-                                <span>Automação</span>
-                                <span>Análise de Dados</span>
+                                <span>ETL</span>
                             </div>
                         </div>
                         <a href="https://github.com/ViniciusCostawj" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
@@ -440,4 +435,3 @@
 
 </body>
 </html>
-

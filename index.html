@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Vinicius Costa</title>
+    <title>Portfólio - Vinicius Costa | Engenheiro de IA</title>
     <style>
         /* CSS Básico e Reset */
         :root {
@@ -62,6 +62,12 @@
         .header h1 {
             font-size: 2.5rem;
             margin-bottom: 5px;
+        }
+        
+        .header p.subtitle {
+            font-size: 1.2rem;
+            color: var(--cor-primaria);
+            font-weight: 500;
         }
 
         .header .links {
@@ -137,6 +143,13 @@
             font-weight: 500;
         }
 
+        /* Destaque para tags de IA */
+        .tag-ia {
+            border: 1px solid var(--cor-destaque-ia) !important;
+            color: var(--cor-destaque-ia) !important;
+            font-weight: 600 !important;
+        }
+
         /* Seção de Projetos */
         .secao-projetos {
             margin-bottom: 40px;
@@ -187,6 +200,25 @@
             margin-bottom: 10px;
         }
 
+        .cartao-projeto .projeto-imagem-container {
+            margin: 15px 0;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .cartao-projeto img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+        
+        .cartao-projeto:hover img {
+             transform: scale(1.02);
+        }
+
         .cartao-projeto p {
             font-size: 1rem;
             margin-bottom: 20px;
@@ -209,16 +241,40 @@
             font-weight: 500;
         }
 
-        .cartao-projeto .link-repo {
-            display: inline-block;
-            text-decoration: none;
-            color: var(--cor-primaria);
-            font-weight: 600;
-            align-self: flex-start;
+        .cartao-projeto .botoes-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
-        .cartao-projeto .link-repo:hover {
-            text-decoration: underline;
+        .cartao-projeto .link-repo, .cartao-projeto .link-demo {
+            display: inline-block;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+
+        .link-repo {
+            color: var(--cor-primaria);
+            border: 2px solid var(--cor-primaria);
+        }
+
+        .link-repo:hover {
+            background-color: var(--cor-primaria);
+            color: white;
+        }
+        
+        .link-demo {
+             background-color: var(--cor-destaque-ia);
+             color: white;
+             border: 2px solid var(--cor-destaque-ia);
+        }
+        
+        .link-demo:hover {
+            background-color: #7d3c98;
+            border-color: #7d3c98;
         }
         
         /* Rodapé */
@@ -236,6 +292,7 @@
 
         <header class="header">
             <h1>Vinicius Costa</h1>
+            <p class="subtitle">Engenheiro de IA | Sistemas Multi-Agentes & Backend</p>
             <div class="links">
                 <a href="https://github.com/ViniciusCostawj" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/vinicius-costa-20a196214" target="_blank">LinkedIn</a>
@@ -247,93 +304,99 @@
             <section class="sobre">
                 <h2>🚀 Sobre mim</h2>
                 <p>
-                    Cientista da Computação e Desenvolvedor focado em <strong>Engenharia de IA</strong>, Automação de Processos e Back-end. Especializado na construção de <strong>Agentes Autônomos</strong> e pipelines de dados inteligentes. Tenho experiência sólida em integrar LLMs (Llama 3) com bancos de dados corporativos (Text-to-SQL) e otimizar rotinas financeiras críticas (ETL, API PIX), sempre prezando por inovação e código limpo.
+                    Cientista da Computação e Engenheiro de Software especializado na arquitetura de <strong>Sistemas Agênticos Complexos</strong> e backends de alta performance. Meu foco é orquestrar <strong>Agentes Autônomos (LangGraph)</strong> com ciclos de auto-correção e pipelines de <strong>RAG Avançado</strong> para resolver problemas críticos de negócio, como na automação financeira (SPB/Pix).
                 </p>
             </section>
             
             <section class="habilidades">
                 <h2>🛠️ Tecnologias & Ferramentas</h2>
                 
-                <h3>Inteligência Artificial (IA)</h3>
+                <h3>Inteligência Artificial (IA) & Agentes</h3>
                 <div class="tags">
-                    <span style="border: 1px solid var(--cor-destaque-ia); color: var(--cor-destaque-ia);">LangChain</span>
-                    <span>Llama 3 (Ollama)</span>
-                    <span>RAG / Text-to-SQL</span>
-                    <span>Regex (Data Mining)</span>
-                    <span>Agentes Autônomos</span>
+                    <span class="tag-ia">LangGraph (Orquestração)</span>
+                    <span class="tag-ia">Sistemas Multi-Agentes</span>
+                    <span class="tag-ia">Qdrant / Vector DB</span>
+                    <span>LangChain</span>
+                    <span>Llama 3 (Local/Ollama)</span>
+                    <span>RAG Avançado</span>
+                    <span>Self-Correction Loops</span>
                 </div>
 
-                <h3>Back-end & Dados</h3>
+                <h3>Back-end & Infraestrutura</h3>
                 <div class="tags">
-                    <span>Python</span>
+                    <span>Python (Avançado)</span>
                     <span>FastAPI</span>
+                    <span>Docker & Compose</span>
+                    <span>PostgreSQL (SQL Otimizado)</span>
                     <span>Flask</span>
-                    <span>PostgreSQL</span>
-                    <span>Pandas</span>
-                    <span>Selenium</span>
-                    <span>SQL Avançado</span>
+                    <span>Linux</span>
+                    <span>Git & GitHub</span>
                 </div>
 
-                <h3>Linguagens & Outros</h3>
+                <h3>Domínio & Outros</h3>
                 <div class="tags">
-                    <span>JavaScript (React)</span>
-                    <span>HTML/CSS</span>
-                    <span>Git & GitHub</span>
-                    <span>DevOps (CI/CD)</span>
+                    <span>Fintech (SPB/Pix)</span>
+                    <span>Automação (ETL/RPA)</span>
+                    <span>Análise Forense de Dados</span>
                     <span>Zabbix/Grafana</span>
-                    <span>Linux</span>
                 </div>
             </section>
 
             <section class="secao-projetos">
-                <h2>Projetos Principais</h2>
+                <h2>Projetos em Destaque</h2>
 
                 <div class="grade-projetos">
                     
-                    <div class="cartao-projeto" style="border-left: 5px solid var(--cor-destaque-ia);">
+                    <div class="cartao-projeto" style="border-left: 5px solid var(--cor-destaque-ia); grid-column: 1 / -1;">
                         <div>
-                            <h3 style="color: var(--cor-destaque-ia);">Agente IA v3.1: Forense Bancária (Jarvis)</h3>
+                            <h3 style="color: var(--cor-destaque-ia); font-size: 1.6rem;">A.L.A.N. v2.0 - Sistema Multi-Agente Autônomo</h3>
+                            <p style="font-weight: 500; color: #666; margin-bottom: 15px;">Auditoria Forense com Self-Correction e RAG Multimodal</p>
                             
-                            <div style="margin: 15px 0; border: 1px solid #333; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-                                <img src="./jarvis_ui.png" 
-                                     alt="Interface do Sistema Jarvis SPB" 
-                                     style="width: 100%; height: auto; display: block;">
+                            <div class="projeto-imagem-container">
+                                <img src="./alan_arch.png" 
+                                     alt="Diagrama de Arquitetura do A.L.A.N. usando LangGraph e Qdrant"
+                                     onerror="this.src='https://placehold.co/800x400/8e44ad/ffffff?text=Arquitetura+A.L.A.N.+(Adicione+a+imagem)';">
                             </div>
 
                             <p>
-                                Sistema autônomo de investigação forense para PIX/SPB. Utiliza arquitetura <strong>LangGraph</strong> para orquestrar diagnósticos complexos e <strong>Text-to-SQL</strong> blindado.
+                                O A.L.A.N. não é um chatbot simples. É uma força de trabalho digital composta por **três agentes especializados** orquestrados via **LangGraph**. Projetado para automatizar análises forenses complexas no setor financeiro (SPB/Pix).
                                 <br><br>
-                                <strong>Destaques v3.1:</strong>
-                                <br>• 🖥️ <strong>Interface TUI:</strong> Dashboard interativo estilo "Command Center" (foto acima).
-                                <br>• 🛡️ <strong>Engenharia Híbrida:</strong> Combina Llama 3 para raciocínio e Python puro para cálculo de SLA preciso.
-                                <br>• 🐳 <strong>DevOps:</strong> Aplicação 100% conteinerizada em Docker.
+                                <strong>Diferenciais Técnicos:</strong>
+                                <br>✅ <strong>Orquestração Multi-Agente:</strong> Fluxo de estado complexo entre Pesquisador, Redator e Crítico.
+                                <br>🔄 <strong>Self-Correction Loop:</strong> O agente Crítico avalia tecnicamente a resposta e **rejeita/refaz** o processo se encontrar alucinações ou erros.
+                                <br>🧠 <strong>RAG Avançado (Qdrant):</strong> Ingestão multimodal de PDFs, CSVs complexos e Schemas XSD legados para memória vetorial de alta precisão.
+                                <br>🐳 <strong>Infraestrutura:</strong> 100% conteinerizado em Docker, usando Llama 3 localmente para privacidade.
                             </p>
                             
                             <div class="tags">
-                                <span>Python (Textual)</span>
-                                <span>LangGraph</span>
+                                <span class="tag-ia">LangGraph</span>
+                                <span class="tag-ia">Multi-Agent Systems</span>
+                                <span class="tag-ia">Qdrant (Vector DB)</span>
+                                <span class="tag-ia">Self-Correction</span>
                                 <span>Llama 3</span>
                                 <span>Docker</span>
-                                <span>PostgreSQL</span>
+                                <span>FastAPI</span>
                             </div>
                         </div>
-                        <a href="https://github.com/ViniciusCostawj/Agente-Forense-Banc-rio-Aut-nomo-Jarvis-SPB-v3.1-" class="link-repo" target="_blank">Ver Código e Demo &rarr;</a>
+                        <div class="botoes-links">
+                            <a href="https://github.com/ViniciusCostawj/Agente-Forense-Banc-rio-Aut-nomo-Jarvis-SPB-v3.1-" class="link-repo" target="_blank">Ver Código no GitHub &rarr;</a>
+                            
+                             </div>
                     </div>
 
                     <div class="cartao-projeto">
                         <div>
                             <h3>Plataforma de Monitoramento SPB</h3>
                             <p>
-                                De script manual para plataforma Full Stack. Solução para rastreamento em tempo real de transações financeiras críticas.
+                                Solução Full Stack para rastreamento em tempo real de transações financeiras críticas do Banco Central. Substituiu processos manuais por um dashboard de alta performance.
                                 <br><br>
-                                <strong>Stack:</strong> Back-end em <strong>Flask</strong> otimizado com CTEs e UNION ALL para consultar 5 tabelas simultaneamente. Front-end em <strong>React</strong> com indicadores visuais de performance.
+                                <strong>Stack:</strong> Back-end em <strong>Flask</strong> otimizado com CTEs e UNION ALL para consultas complexas. Front-end em <strong>React</strong>.
                             </p>
                             <div class="tags">
-                                <span>Python</span>
-                                <span>Flask</span>
-                                <span>React</span>
+                                <span>Python (Flask)</span>
+                                <span>React.js</span>
                                 <span>PostgreSQL</span>
-                                <span>SQL Avançado</span>
+                                <span>SQL Otimizado</span>
                             </div>
                         </div>
                         <a href="https://github.com/ViniciusCostawj/Monitoramento-de-Mensageria-de-Alta-Performance" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
@@ -341,13 +404,13 @@
 
                     <div class="cartao-projeto">
                         <div>
-                            <h3>API SPI & DICT (PIX)</h3>
-                            <p>API em FastAPI para integração segura com o SPI (PIX) e DICT do Banco Central. Implementa mTLS, assinatura XMLDSig (pacs.008) e consultas de chaves.</p>
+                            <h3>API SPI & DICT (PIX) - Bacen</h3>
+                            <p>API robusta em FastAPI para integração segura com o ecossistema Pix. Implementa requisitos rigorosos de segurança bancária como **mTLS** e assinatura digital **XMLDSig** (pacs.008).</p>
                             <div class="tags">
                                 <span>FastAPI</span>
-                                <span>Cryptography</span>
-                                <span>SignXML</span>
-                                <span>mTLS</span>
+                                <span>Segurança (mTLS)</span>
+                                <span>Assinatura Digital (XML)</span>
+                                <span>Fintech</span>
                             </div>
                         </div>
                         <a href="https://github.com/ViniciusCostawj/Legado-banco-bacen" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
@@ -355,79 +418,18 @@
 
                     <div class="cartao-projeto">
                         <div>
-                            <h3>Backup de Mensageria Bacen (V1)</h3>
-                            <p>Script Python que realiza consultas otimizadas em PostgreSQL (focadas em mensageria Bacen) e exporta os resultados de forma eficiente para JSON.</p>
-                            <div class="tags">
-                                <span>Python</span>
-                                <span>psycopg2</span>
-                                <span>JSON</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/ViniciusCostawj/backup-s-processo" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
-                    </div>
-
-                    <div class="cartao-projeto">
-                        <div>
-                            <h3>Raspagem - Portal da Transparência</h3>
-                            <p>Script de web scraping que acessa o Portal da Transparência, extrai dados de servidores públicos e estrutura os resultados para análise.</p>
-                            <div class="tags">
-                                <span>Python</span>
-                                <span>Scrapy</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/ViniciusCostawj/raspagem-scrapy-de-dados-1" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
-                    </div>
-
-                    <div class="cartao-projeto">
-                        <div>
-                            <h3>Verificador de Domínios (Registro.br)</h3>
-                            <p>Script Python (RPA) que utiliza Selenium headless para verificar disponibilidade massiva de domínios e salvar relatórios JSON.</p>
+                            <h3>Automação de RPA (Selenium)</h3>
+                            <p>Conjunto de bots para verificação massiva de domínios e extração de dados públicos (Portal da Transparência).</p>
                             <div class="tags">
                                 <span>Python</span>
                                 <span>Selenium</span>
-                                <span>Automação</span>
+                                <span>Web Scraping</span>
                             </div>
                         </div>
-                        <a href="https://github.com/ViniciusCostawj/raspagem-de-dados-2" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
-                    </div>
-                    
-                    <div class="cartao-projeto">
-                        <div>
-                            <h3>Gerenciamento de Tarefas (CRUD)</h3>
-                            <p>Sistema web em PHP para gerenciamento de tarefas com autenticação e banco de dados SQLite.</p>
-                            <div class="tags">
-                                <span>PHP</span>
-                                <span>SQLite</span>
-                                <span>HTML/CSS</span>
-                            </div>
+                        <div class="botoes-links">
+                             <a href="https://github.com/ViniciusCostawj/raspagem-de-dados-2" class="link-repo" target="_blank">Bot Domínios &rarr;</a>
+                             <a href="https://github.com/ViniciusCostawj/raspagem-scrapy-de-dados-1" class="link-repo" target="_blank">Bot Transparência &rarr;</a>
                         </div>
-                        <a href="https://github.com/ViniciusCostawj/Crud-SQLITE" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
-                    </div>
-                    
-                    <div class="cartao-projeto">
-                        <div>
-                            <h3>Rose - Assistente Virtual</h3>
-                            <p>Assistente virtual em Python ativada por voz ("rose"). Utiliza reconhecimento de voz para executar comandos e buscas.</p>
-                            <div class="tags">
-                                <span>Python</span>
-                                <span>SpeechRecognition</span>
-                                <span>IA Básica</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/ViniciusCostawj/rose_py" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
-                    </div>
-                    
-                    <div class="cartao-projeto">
-                        <div>
-                            <h3>Scripts de Análise e Automação</h3>
-                            <p>Coleção de scripts utilitários em Python/Pandas para reconciliação de arquivos, cálculos financeiros e ETL.</p>
-                            <div class="tags">
-                                <span>Python</span>
-                                <span>Pandas</span>
-                                <span>ETL</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/ViniciusCostawj" class="link-repo" target="_blank">Ver no GitHub &rarr;</a>
                     </div>
 
                 </div>
@@ -435,7 +437,7 @@
         </main>
         
         <footer class="footer">
-            <p>&copy; 2025 Vinicius Costa. Feito com HTML, CSS e ☕</p>
+            <p>&copy; 2026 Vinicius Costa. Engenharia de IA e Código Limpo.</p>
         </footer>
 
     </div>
